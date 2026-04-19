@@ -300,13 +300,23 @@
     .form-card {
         background: var(--card);
         border: 1px solid rgba(201,168,76,.12);
-        border-radius: 20px; padding: 22px; margin-bottom: 16px;
+        border-radius: 20px;
+        overflow: hidden;       /* clip iframe to rounded corners */
+        margin-bottom: 16px;
     }
+    /* Google Form iframe — 全寬、無邊框 */
+    .form-card iframe {
+        display: block;
+        width: 100% !important;
+        max-width: 100%;
+        border: none;
+    }
+    /* 沒有 iframe 時顯示的 placeholder */
     .form-ph {
         background: rgba(255,255,255,.025);
         border: 1px dashed rgba(201,168,76,.2);
         border-radius: 14px; padding: 26px 20px; text-align: center;
-        color: var(--mid);
+        color: var(--mid); margin: 16px;
     }
     .form-ph strong { color: var(--gold-lt); }
     .form-step {
@@ -386,14 +396,13 @@
 <div class="section" style="padding-top:28px; padding-bottom:24px;">
     <div class="sec-lbl">💬 家人留言板</div>
     <div class="form-card">
-        <!-- ╔══════════════════════════════════════════╗
-             ║  == 貼上 Google Form iframe 代碼處 ==    ║
-             ║  把下方整個 form-ph div 換成你的 iframe   ║
-             ╚══════════════════════════════════════════╝ -->
-        <div class="form-ph">
-             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdzAMFfuPF_PbLLFQj_mpXEByQJ6I6LH8lFrwExKsc1vFMSsA/viewform?embedded=true" width="640" height="409" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </div>
-        </div>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdzAMFfuPF_PbLLFQj_mpXEByQJ6I6LH8lFrwExKsc1vFMSsA/viewform?embedded=true"
+            width="100%" height="520"
+            frameborder="0" marginheight="0" marginwidth="0"
+            style="width:100%;display:block;border:none;">
+            載入中…
+        </iframe>
     </div>
 </div>
 
