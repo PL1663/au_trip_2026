@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳洲家庭旅遊 2026｜Sydney + Uluru</title>
+    <!--
+    ========================================================
+      澳洲家庭旅遊網頁  |  Sydney + Uluru  |  2026/8/13–8/22
+    ========================================================
+    【GitHub Pages 上架步驟】
+    1. github.com → 新建 Repository（例如 au-trip-2026）
+    2. 上傳這個 index.html
+    3. Settings → Pages → Source: main / (root) → Save
+    4. 網址：https://你的帳號.github.io/au-trip-2026/
+
+    【嵌入 Google 表單】
+    1. forms.google.com 建立表單
+    2. 「傳送」→「<>」→ 複製 iframe 代碼
+    3. 搜尋「貼上 Google Form」，替換掉 placeholder div
+    ========================================================
+    -->
+    <style>
+    :root {
+        --gold:      #C9A84C;
+        --gold-lt:   #E8D49A;
+        --gold-dk:   #8A6E2A;
+        --navy:      #09131E;
+        --navy-2:    #112030;
+        --card:      #17283A;
+        --card-lt:   #1F3347;
+        --white:     #F0EAE0;
+        --cream:     #C4B49A;
+        --mid:       #6A7E96;
+        --uluru-dk:  #3E0E04;
+        --uluru-mid: #7A2C0C;
+        --uluru-br:  #C8581C;
+        --syd-dk:    #08253C;
+        --syd-mid:   #165070;
+        --syd-br:    #3592BF;
+        --mtn-dk:    #0C2418;
+        --mtn-mid:   #1C4430;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                     'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+        background: var(--navy);
+        color: var(--white);
+        line-height: 1.65;
+        max-width: 520px;
+        margin: 0 auto;
+        /* fixed starfield on body */
+        background-image:
+            radial-gradient(1.5px 1.5px at  8%  6%, rgba(255,255,255,.55) 0%, transparent 100%),
+            radial-gradient(1px   1px   at 22%  3%, rgba(255,255,255,.35) 0%, transparent 100%),
+            radial-gradient(2px   2px   at 68%  9%, rgba(255,255,255,.45) 0%, transparent 100%),
+            radial-gradient(1px   1px   at 85%  2%, rgba(255,255,255,.30) 0%, transparent 100%),
+            radial-gradient(1.5px 1.5px at 48% 14%, rgba(255,255,255,.40) 0%, transparent 100%),
+            radial-gradient(1px   1px   at 38%  7%, rgba(255,255,255,.25) 0%, transparent 100%),
+            radial-gradient(1px   1px   at 61%  5%, rgba(255,255,255,.35) 0%, transparent 100%),
+            radial-gradient(2px   2px   at 18% 19%, rgba(255,255,255,.20) 0%, transparent 100%),
+            radial-gradient(1px   1px   at 93% 11%, rgba(255,255,255,.30) 0%, transparent 100%),
+            radial-gradient(1px   1px   at  2% 25%, rgba(255,255,255,.20) 0%, transparent 100%),
+            radial-gradient(1.5px 1.5px at 77% 16%, rgba(255,255,255,.25) 0%, transparent 100%),
+            radial-gradient(1px   1px   at 31% 21%, rgba(255,255,255,.15) 0%, transparent 100%);
+        background-attachment: fixed;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+        position: relative;
+        min-height: 340px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 24px 52px;
+        text-align: center;
+        overflow: hidden;
+    }
+    .hero-bg {
+        position: absolute; inset: 0;
+        background-image:
+            linear-gradient(to bottom, rgba(5,14,24,.25) 0%, rgba(9,19,30,.82) 75%, var(--navy) 100%),
+            url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80'),
+            linear-gradient(135deg, var(--syd-dk) 0%, var(--syd-mid) 40%, var(--uluru-mid) 70%, var(--uluru-dk) 100%);
+        background-size: cover;
+        background-position: center;
+    }
+    /* CSS star dots in hero */
+    .hero-bg::after {
+        content: '';
+        position: absolute; inset: 0;
+        background-image:
+            radial-gradient(1.5px 1.5px at 10% 10%, #fff 0%, transparent 100%),
+            radial-gradient(1px   1px   at 28%  5%, #fff 0%, transparent 100%),
+            radial-gradient(2px   2px   at 72%  8%, #fff 0%, transparent 100%),
+            radial-gradient(1px   1px   at 88%  3%, #fff 0%, transparent 100%),
+            radial-gradient(1.5px 1.5px at 52% 16%, rgba(255,255,255,.8) 0%, transparent 100%),
+            radial-gradient(1px   1px   at 44%  8%, rgba(255,255,255,.6) 0%, transparent 100%),
+            radial-gradient(1px   1px   at 63%  5%, rgba(255,255,255,.7) 0%, transparent 100%),
+            radial-gradient(1px   1px   at 20% 22%, rgba(255,255,255,.4) 0%, transparent 100%),
+            radial-gradient(2px   2px   at 93% 13%, rgba(255,255,255,.5) 0%, transparent 100%),
+            radial-gradient(1px   1px   at  5% 18%, rgba(255,255,255,.4) 0%, transparent 100%),
+            radial-gradient(1.5px 1.5px at 80% 20%, rgba(255,255,255,.45) 0%, transparent 100%);
+        opacity: .65;
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .hero-flags { font-size: 38px; display: block; margin-bottom: 14px; letter-spacing: 6px; }
+    .hero h1 {
+        font-size: 27px; font-weight: 900;
+        letter-spacing: .5px; line-height: 1.2;
+        text-shadow: 0 2px 20px rgba(0,0,0,.9);
+    }
+    .hero-sub {
+        font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+        color: var(--gold); margin-top: 8px; font-weight: 700;
+    }
+    .hero-pill {
+        display: inline-block;
+        border: 1px solid rgba(201,168,76,.45);
+        border-radius: 24px;
+        padding: 7px 22px;
+        font-size: 13px; color: var(--gold-lt);
+        margin-top: 14px;
+        backdrop-filter: blur(6px);
+        background: rgba(0,0,0,.2);
+    }
+
+    /* ─── GOLD RULE ─── */
+    .g-rule {
+        height: 1px;
+        background: linear-gradient(to right, transparent, var(--gold), transparent);
+        margin: 0 20px;
+        opacity: .35;
+    }
+
+    /* ─── SECTION ─── */
+    .section { padding: 28px 16px 0; }
+    .sec-lbl {
+        font-size: 11px; font-weight: 700;
+        letter-spacing: 3px; text-transform: uppercase;
+        color: var(--gold);
+        display: flex; align-items: center; gap: 12px;
+        margin-bottom: 16px;
+    }
+    .sec-lbl::after {
+        content: '';
+        flex: 1; height: 1px;
+        background: linear-gradient(to right, rgba(201,168,76,.3), transparent);
+    }
+
+    /* ─── COUNTDOWN ─── */
+    .cd-card {
+        background: var(--card);
+        border: 1px solid rgba(201,168,76,.14);
+        border-radius: 20px;
+        padding: 24px 14px;
+        text-align: center;
+    }
+    .cd-hint { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--mid); margin-bottom: 18px; }
+    .cd-row { display: flex; justify-content: center; gap: 10px; }
+    .cd-box {
+        flex: 1; max-width: 78px;
+        background: rgba(201,168,76,.07);
+        border: 1px solid rgba(201,168,76,.2);
+        border-radius: 14px;
+        padding: 14px 6px;
+    }
+    .cd-n { font-size: 34px; font-weight: 900; color: var(--gold-lt); line-height: 1; }
+    .cd-u { font-size: 10px; color: var(--mid); margin-top: 5px; letter-spacing: 1px; text-transform: uppercase; }
+
+    .trip-on  { background: rgba(0,200,120,.1); border: 1px solid rgba(0,200,120,.25); border-radius: 20px; padding: 22px; text-align: center; font-size: 20px; font-weight: 700; color: #5DFFB0; display: none; }
+    .trip-end { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 20px; padding: 18px; text-align: center; color: var(--mid); display: none; }
+
+    /* ─── WEATHER ─── */
+    .w-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .w-card {
+        border-radius: 16px; padding: 18px 16px; overflow: hidden;
+        position: relative;
+    }
+    .w-card.syd { background: linear-gradient(150deg, var(--syd-dk), var(--syd-mid)); border: 1px solid rgba(53,146,191,.2); }
+    .w-card.ulu { background: linear-gradient(150deg, var(--uluru-dk), var(--uluru-mid)); border: 1px solid rgba(200,88,28,.2); }
+    .w-city { font-size: 12px; font-weight: 700; color: var(--gold-lt); margin-bottom: 6px; letter-spacing: 1px; }
+    .w-temp { font-size: 30px; font-weight: 900; color: #fff; margin-bottom: 6px; }
+    .w-tips { font-size: 11.5px; color: rgba(255,255,255,.65); line-height: 1.65; }
+    .w-note {
+        background: rgba(201,168,76,.06);
+        border: 1px solid rgba(201,168,76,.14);
+        border-left: 3px solid var(--gold);
+        border-radius: 14px;
+        padding: 14px 16px;
+        font-size: 13px;
+        color: var(--cream);
+        line-height: 1.75;
+    }
+
+    /* ─── CHAPTER BANNERS ─── */
+    .chapter {
+        margin: 30px 0 0;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        min-height: 180px;
+        display: flex;
+        align-items: flex-end;
+        padding: 22px 22px;
+        background-size: cover;
+        background-position: center;
+    }
+    .ch-content { position: relative; z-index: 2; }
+    .ch-act {
+        font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+        color: var(--gold); font-weight: 700; margin-bottom: 5px;
+    }
+    .ch-title { font-size: 24px; font-weight: 900; color: #fff; line-height: 1.15; text-shadow: 0 2px 14px rgba(0,0,0,.9); }
+    .ch-sub { font-size: 12px; color: rgba(255,255,255,.55); margin-top: 4px; letter-spacing: 1px; }
+
+    /* ─── DAY CARDS ─── */
+    #itinerary { padding-top: 14px; }
+
+    .day-card {
+        background: var(--card);
+        border: 1px solid rgba(255,255,255,.06);
+        border-radius: 20px;
+        margin-bottom: 14px;
+        overflow: hidden;
+        transition: border-color .25s;
+    }
+    .day-card:hover { border-color: rgba(201,168,76,.22); }
+
+    /* photo strip */
+    .day-photo {
+        height: 130px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .day-hdr {
+        display: flex; align-items: center;
+        gap: 13px; padding: 14px 16px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+    }
+    .day-hdr:active { background: rgba(255,255,255,.02); }
+
+    .day-badge {
+        width: 46px; height: 46px;
+        border-radius: 50%;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        flex-shrink: 0; font-weight: 900;
+    }
+    .db-s { background: linear-gradient(135deg, var(--gold-dk), var(--gold)); color: var(--navy); }
+    .db-u { background: linear-gradient(135deg, var(--uluru-mid), var(--uluru-br)); color: #fff; }
+    .dbl { font-size: 7.5px; letter-spacing: .8px; opacity: .72; line-height: 1; text-transform: uppercase; }
+    .dbn { font-size: 19px; line-height: 1.1; }
+
+    .day-meta { flex: 1; }
+    .day-name { font-size: 15px; font-weight: 700; color: var(--white); }
+    .day-date { font-size: 11.5px; color: var(--mid); margin-top: 1px; }
+    .day-arr { font-size: 18px; color: var(--gold); transition: transform .28s ease; user-select: none; }
+    .day-arr.open { transform: rotate(180deg); }
+
+    .day-body {
+        display: none;
+        padding: 4px 16px 18px;
+        border-top: 1px solid rgba(255,255,255,.05);
+    }
+    .day-body.open { display: block; }
+
+    .act {
+        display: flex; align-items: flex-start;
+        gap: 10px; padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,.04);
+    }
+    .act:last-child { border-bottom: none; }
+    .act-ico { font-size: 17px; width: 24px; text-align: center; flex-shrink: 0; margin-top: 2px; }
+    .act-r { flex: 1; }
+    .act-t { font-size: 11px; font-weight: 700; letter-spacing: .5px; margin-bottom: 2px; }
+    .act-t.s { color: var(--gold); }
+    .act-t.u { color: var(--uluru-br); }
+    .act-tx { font-size: 13.5px; color: var(--cream); line-height: 1.45; }
+    .mlink {
+        display: inline-flex; align-items: center; gap: 3px;
+        margin-top: 5px; font-size: 11px; font-weight: 600;
+        padding: 3px 12px; border-radius: 20px; text-decoration: none;
+        transition: opacity .2s;
+    }
+    .mlink:active { opacity: .65; }
+    .mlink.s { color: var(--gold); background: rgba(201,168,76,.1); border: 1px solid rgba(201,168,76,.25); }
+    .mlink.u { color: var(--uluru-br); background: rgba(200,88,28,.1); border: 1px solid rgba(200,88,28,.25); }
+
+    /* ─── FORM ─── */
+    .form-card {
+        background: var(--card);
+        border: 1px solid rgba(201,168,76,.12);
+        border-radius: 20px; padding: 22px; margin-bottom: 16px;
+    }
+    .form-ph {
+        background: rgba(255,255,255,.025);
+        border: 1px dashed rgba(201,168,76,.2);
+        border-radius: 14px; padding: 26px 20px; text-align: center;
+        color: var(--mid);
+    }
+    .form-ph strong { color: var(--gold-lt); }
+    .form-step {
+        background: rgba(0,0,0,.28); border-radius: 10px;
+        padding: 12px 16px; margin-top: 12px;
+        text-align: left; font-size: 12px;
+        color: var(--cream); line-height: 2;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+        text-align: center;
+        padding: 36px 24px 56px;
+        border-top: 1px solid rgba(201,168,76,.08);
+        margin-top: 8px;
+    }
+    .ft-big { font-size: 28px; display: block; margin-bottom: 10px; }
+    .ft-txt { color: var(--cream); font-size: 14px; font-weight: 600; }
+    .ft-sub { color: var(--mid); font-size: 11px; margin-top: 6px; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+<!-- ════════ HERO ════════ -->
+<div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <span class="hero-flags">🦘 🇦🇺 ✨</span>
+        <h1>澳洲家庭旅遊 2026</h1>
+        <div class="hero-sub">Sydney · Uluru · Blue Mountains</div>
+        <div class="hero-pill">2026 年 8 月 13 日 – 8 月 22 日</div>
+    </div>
+</div>
+
+<!-- ════════ COUNTDOWN ════════ -->
+<div class="section">
+    <div class="sec-lbl">✈️ 出發倒數</div>
+    <div class="cd-card" id="cdCard">
+        <div class="cd-hint">距離起飛還有</div>
+        <div class="cd-row">
+            <div class="cd-box"><div class="cd-n" id="cd-d">--</div><div class="cd-u">天</div></div>
+            <div class="cd-box"><div class="cd-n" id="cd-h">--</div><div class="cd-u">時</div></div>
+            <div class="cd-box"><div class="cd-n" id="cd-m">--</div><div class="cd-u">分</div></div>
+            <div class="cd-box"><div class="cd-n" id="cd-s">--</div><div class="cd-u">秒</div></div>
+        </div>
+    </div>
+    <div class="trip-on"  id="cdOn">🎉 旅途愉快！現在正在澳洲探險中 🦘</div>
+    <div class="trip-end" id="cdEnd">🏠 旅途圓滿結束，滿載回憶平安回家！</div>
+</div>
+
+<!-- ════════ WEATHER ════════ -->
+<div class="section">
+    <div class="sec-lbl">🌤️ 八月天氣提醒</div>
+    <div class="w-grid">
+        <div class="w-card syd">
+            <div class="w-city">🌊 雪梨</div>
+            <div class="w-temp">8–17°C</div>
+            <div class="w-tips">澳洲冬天<br>涼爽少雨<br>早晚需外套<br>日曬仍強烈</div>
+        </div>
+        <div class="w-card ulu">
+            <div class="w-city">🏜️ 烏魯魯</div>
+            <div class="w-temp">5–25°C</div>
+            <div class="w-tips">日夜溫差大<br>白天舒爽<br>夜晚超冷！<br>羽絨必備</div>
+        </div>
+    </div>
+    <div class="w-note">
+        💡 <strong style="color:var(--gold-lt)">穿搭建議：</strong>洋蔥式穿法最實用。Sydney 帶防風薄外套；Uluru 日出、日落、Field of Light 都在戶外，晚上近 5°C，<strong style="color:var(--gold-lt)">羽絨衣＋手套不可少</strong>！
+    </div>
+</div>
+
+<!-- ════════ ITINERARY ════════ -->
+<div class="section" style="padding-top:0">
+    <div id="itinerary"></div>
+</div>
+
+<!-- ════════ COMMENTS ════════ -->
+<div class="section" style="padding-top:28px; padding-bottom:24px;">
+    <div class="sec-lbl">💬 家人留言板</div>
+    <div class="form-card">
+        <!-- ╔══════════════════════════════════════════╗
+             ║  == 貼上 Google Form iframe 代碼處 ==    ║
+             ║  把下方整個 form-ph div 換成你的 iframe   ║
+             ╚══════════════════════════════════════════╝ -->
+        <div class="form-ph">
+             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdzAMFfuPF_PbLLFQj_mpXEByQJ6I6LH8lFrwExKsc1vFMSsA/viewform?embedded=true" width="640" height="409" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ════════ FOOTER ════════ -->
+<div class="footer">
+    <span class="ft-big">🦘🐨🌏</span>
+    <div class="ft-txt">旅行順利，平安回家 ❤️</div>
+    <div class="ft-sub">澳洲家庭旅遊 2026 · Sydney + Uluru</div>
+</div>
+
+<script>
+// ═══════════════════════════════════════
+// CHAPTER BANNERS（對應 PDF 的 Act I/II/III）
+// ═══════════════════════════════════════
+const CHAPTERS = [
+    {
+        beforeDay: 1,
+        act: "ACT I · 都會璀璨",
+        title: "雪梨海港的風華",
+        sub: "Days 1–3",
+        bg: "linear-gradient(to bottom,rgba(0,0,0,.15),rgba(0,0,0,.72)),url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&h=400&q=80'),linear-gradient(145deg,#08253C,#165070,#1A6090)"
+    },
+    {
+        beforeDay: 4,
+        act: "ACT II · 寂靜與神聖",
+        title: "烏魯魯的古老靈魂",
+        sub: "Days 4–5",
+        bg: "linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.78)),url('https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?auto=format&fit=crop&w=800&h=400&q=80'),linear-gradient(145deg,#3E0E04,#7A2C0C,#A03A10)"
+    },
+    {
+        beforeDay: 6,
+        act: "ACT III · 華麗回歸",
+        title: "難忘的海港告別",
+        sub: "Days 6–10",
+        bg: "linear-gradient(to bottom,rgba(0,0,0,.2),rgba(0,0,0,.80)),url('https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?auto=format&fit=crop&w=800&h=400&q=80'),linear-gradient(145deg,#05101C,#0D2535,#182F45)"
+    },
+];
+
+// ═══════════════════════════════════════
+// DAY DATA（加入 photo + fallback 漸層）
+// ═══════════════════════════════════════
+const DAYS = [
+    {
+        day:1, date:"8/13（四）", title:"抵達 Sydney", theme:"s",
+        photo:"https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&h=260&q=80",
+        fb:"linear-gradient(135deg,#08253C,#1A5A80)",
+        acts:[
+            {time:"11:00",       icon:"✈️", text:"抵達 Sydney 國際機場",              map:"Sydney+Kingsford+Smith+Airport"},
+            {time:"13:00",       icon:"🏨", text:"飯店入住，休息整理",                map:null},
+            {time:"15:00–18:00", icon:"🚶", text:"Circular Quay 散步＋歌劇院外觀",   map:"Circular+Quay+Sydney"},
+            {time:"18:30",       icon:"🍽️", text:"晚餐＋早點休息",                   map:null},
+        ]
+    },
+    {
+        day:2, date:"8/14（五）", title:"歌劇院＋港灣", theme:"s",
+        photo:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=260&q=80",
+        fb:"linear-gradient(135deg,#0A2640,#1A5070)",
+        acts:[
+            {time:"09:30",       icon:"🎭", text:"抵達歌劇院",                         map:"Sydney+Opera+House"},
+            {time:"10:00–11:00", icon:"🎵", text:"歌劇院內部導覽",                     map:"Sydney+Opera+House"},
+            {time:"12:00",       icon:"🍽️", text:"Bennelong 午餐",                    map:"Bennelong+Restaurant+Sydney"},
+            {time:"13:30–15:30", icon:"⛴️", text:"Ferry 港灣遊船體驗",                map:"Circular+Quay+Ferry+Terminal+Sydney"},
+            {time:"17:30–19:30", icon:"🥩", text:"The Rocks 晚餐探索",               map:"The+Rocks+Sydney"},
+        ]
+    },
+    {
+        day:3, date:"8/15（六）", title:"Bondi 半天＋購物", theme:"s",
+        photo:"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&h=260&q=80",
+        fb:"linear-gradient(135deg,#0B3545,#1A6080)",
+        acts:[
+            {time:"08:30",       icon:"🚌", text:"出發前往 Bondi Beach",              map:"Bondi+Beach+Sydney"},
+            {time:"09:00–11:30", icon:"🏖️", text:"Coastal Walk（Bondi→Coogee）＋Brunch", map:"Bondi+to+Coogee+Coastal+Walk"},
+            {time:"13:00–17:00", icon:"🛍️", text:"QVB / Pitt Street Mall 購物",     map:"Queen+Victoria+Building+Sydney"},
+        ]
+    },
+    {
+        day:4, date:"8/16（日）", title:"飛往 Uluru", theme:"u",
+        photo:"https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?auto=format&fit=crop&w=800&h=260&q=80",
+        fb:"linear-gradient(135deg,#3E0E04,#8B3510)",
+        acts:[
+            {time:"05:30",       icon:"⏰", text:"起床準備出發",                        map:null},
+            {time:"06:00",       icon:"🚕", text:"前往 Sydney 機場",                   map:"Sydney+Airport"},
+            {time:"08:30–11:30", icon:"✈️", text:"飛往 Uluru（Ayers Rock Airport）", map:"Ayers+Rock+Airport+Connellan"},
+            {time:"12:30",       icon:"🚗", text:"租車＋入住沙漠度假村",               map:"Ayers+Rock+Resort+Yulara"},
+            {time:"15:30–17:30", icon:"🌄", text:"Uluru 日落觀賞 🌅（帶厚外套！）",   map:"Talinguru+Nyakunytjaku+Uluru+Sunset"},
+        ]
+    },
+    {
+        day:5, date:"8/17（一）", title:"Uluru 深度探索", theme:"u",
+        photo:"https://images.unsplash.com/photo-1462275646964-a7ded64a47b4?auto=format&fit=crop&w=800&h=260&q=80",
+        fb:"linear-gradient(135deg,#260A03,#5A1A08)",
+        acts:[
+            {time:"05:30–07:30", icon:"🌅", text:"Uluru 日出（帶厚外套 + 手套！）",  map:"Uluru+Sunrise+Viewing+Area"},
+            {time:"09:00–12:00", icon:"🥾", text:"Uluru Base Walk 環山步行 10.6 km", map:"Uluru+Base+Walk+Mutitjulu"},
+            {time:"13:00–17:00", icon:"🏜️", text:"Kata Tjuta — Valley of the Winds", map:"Kata+Tjuta+Valley+of+the+Winds"},
+            {time:"18:30–21:00", icon:"✨", text:"Field of Light 光之田野藝術裝置",   map:"Field+of+Light+Uluru+Ayers+Rock+Resort"},
+        ]
+    },
+    {
+        day:6, date:"8/18（二）", title:"回 Sydney", theme:"s",
+        photo:"https://images.unsplash.com/photo-1534906673721-ee0e7d540ee9?auto=format&fit=crop&w=800&h=260&q=80",
+        fb:"linear-gradient(135deg,#05101C,#0D2A45)",
+        acts:[
+            {time:"08:30–10:30", icon:"☕", text:"自由活動＋早餐",                    map:null},
+            {time:"12:30–16:00", icon:"✈️", text:"飛回 Sydney",                      map:"Sydney+Airport"},
+            {time:"19:00",       icon:"🍾", text:"Quay Restaurant 慶祝晚餐 🌟",      map:"Quay+Restaurant+Sydney"},
+        ]
+    },
+    {
+        day:7, date:"8/19（三）", title:"塔隆加動物園", theme:"s",
+        photo:"https://images.unsplash.com/photo-1504618223053-559bdef9f330?auto=format&fit=crop&w=800&h=260&q=80",
+        fb:"linear-gradient(135deg,#0A2818,#1A5030)",
+        acts:[
+            {time:"09:00",       icon:"⛴️", text:"Circular Quay 搭 Ferry 出發",      map:"Circular+Quay+Ferry+Terminal+Sydney"},
+            {time:"09:30–15:30", icon:"🐨", text:"塔隆加動物園（無尾熊、袋鼠！）",   map:"Taronga+Zoo+Sydney"},
+            {time:"16:00",       icon:"⛴️", text:"搭渡輪返回市區",                    map:"Taronga+Zoo+Wharf+Ferry+Terminal"},
+        ]
+    },
+    {
+        day:8, date:"8/20（四）", title:"港灣探險", theme:"s",
+        photo:"https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?auto=format&fit=crop&w=800&h=260&q=80",
+        fb:"linear-gradient(135deg,#060F1A,#0D2535)",
+        acts:[
+            {time:"10:00–13:00", icon:"🌉", text:"BridgeClimb 大橋攀爬 / 港灣遊船", map:"BridgeClimb+Sydney"},
+            {time:"下午",         icon:"☕", text:"自由活動 — 逛街、休息或咖啡廳",     map:null},
+        ]
+    },
+    {
+        day:9, date:"8/21（五）", title:"藍山（過夜）", theme:"s",
+        photo:"https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=800&h=260&q=80",
+        fb:"linear-gradient(135deg,#0C2418,#1C4430)",
+        acts:[
+            {time:"09:00",       icon:"🚌", text:"從 Sydney 出發前往藍山",            map:"Blue+Mountains+National+Park+NSW"},
+            {time:"11:00",       icon:"🌿", text:"Leura 小鎮午餐＋散步",             map:"Leura+NSW+Australia"},
+            {time:"13:00–17:00", icon:"🚡", text:"Scenic World 纜車＋三姐妹岩",      map:"Scenic+World+Katoomba"},
+            {time:"晚上",         icon:"🏨", text:"入住藍山飯店＋休息",               map:"Leura+NSW+Australia"},
+        ]
+    },
+    {
+        day:10, date:"8/22（六）", title:"日出＋回程 ✈️", theme:"s",
+        photo:"https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&h=260&q=80",
+        fb:"linear-gradient(135deg,#182808,#2E4A15)",
+        acts:[
+            {time:"06:30",       icon:"🌅", text:"藍山日出觀景",                      map:"Echo+Point+Lookout+Katoomba"},
+            {time:"08:30",       icon:"☕", text:"早餐",                              map:null},
+            {time:"10:00–12:30", icon:"🚌", text:"回 Sydney 市區",                   map:"Sydney+CBD"},
+            {time:"13:30–17:00", icon:"🛍️", text:"最後購物＋整理行李",               map:"Pitt+Street+Mall+Sydney"},
+            {time:"22:10",       icon:"✈️", text:"班機返台 — 旅途順利！✈️",           map:"Sydney+Airport"},
+        ]
+    },
+];
+
+// ═══════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════
+function renderItinerary() {
+    const container = document.getElementById('itinerary');
+    const today     = new Date();
+    const tripStart = new Date('2026-08-13T00:00:00+10:00');
+
+    DAYS.forEach((d, idx) => {
+        // Chapter banner?
+        const ch = CHAPTERS.find(c => c.beforeDay === d.day);
+        if (ch) {
+            container.innerHTML += `
+            <div class="chapter" style="background-image:${ch.bg}; background-size:cover; background-position:center;">
+                <div class="ch-content">
+                    <div class="ch-act">${ch.act}</div>
+                    <div class="ch-title">${ch.title}</div>
+                    <div class="ch-sub">${ch.sub}</div>
+                </div>
+            </div>`;
+        }
+
+        const isU     = d.theme === 'u';
+        const dayOff  = Math.floor((today - tripStart) / 864e5);
+        const isToday = dayOff === idx;
+
+        const actsHTML = d.acts.map(a => {
+            const mb = a.map
+                ? `<a class="mlink ${d.theme}" href="https://maps.google.com/?q=${a.map}" target="_blank" rel="noopener">📍 地圖</a>`
+                : '';
+            return `
+            <div class="act">
+                <div class="act-ico">${a.icon}</div>
+                <div class="act-r">
+                    <div class="act-t ${d.theme}">${a.time}</div>
+                    <div class="act-tx">${a.text}</div>
+                    ${mb}
+                </div>
+            </div>`;
+        }).join('');
+
+        container.innerHTML += `
+        <div class="day-card">
+            <div class="day-photo" style="background-image:
+                linear-gradient(to bottom,rgba(0,0,0,.06),rgba(9,19,30,.91)),
+                url('${d.photo}'),
+                ${d.fb};
+                background-size:cover;background-position:center;"></div>
+            <div class="day-hdr" onclick="tog(this)">
+                <div class="day-badge ${isU ? 'db-u':'db-s'}">
+                    <span class="dbl">DAY</span>
+                    <span class="dbn">${d.day}</span>
+                </div>
+                <div class="day-meta">
+                    <div class="day-name">${d.title}</div>
+                    <div class="day-date">${d.date}</div>
+                </div>
+                <div class="day-arr${isToday?' open':''}">⌄</div>
+            </div>
+            <div class="day-body${isToday?' open':''}">
+                ${actsHTML}
+            </div>
+        </div>`;
+    });
+}
+
+function tog(hdr) {
+    hdr.querySelector('.day-arr').classList.toggle('open');
+    hdr.nextElementSibling.classList.toggle('open');
+}
+
+// ═══════════════════════════════════════
+// COUNTDOWN
+// ═══════════════════════════════════════
+function tick() {
+    const go  = new Date('2026-08-13T11:00:00+10:00');
+    const end = new Date('2026-08-22T23:59:00+10:00');
+    const now = new Date();
+    const df  = go - now;
+
+    if (now >= go && now <= end) {
+        document.getElementById('cdCard').style.display = 'none';
+        document.getElementById('cdOn').style.display   = 'block'; return;
+    }
+    if (now > end) {
+        document.getElementById('cdCard').style.display = 'none';
+        document.getElementById('cdEnd').style.display  = 'block'; return;
+    }
+    const p = n => String(n).padStart(2,'0');
+    document.getElementById('cd-d').textContent = p(Math.floor(df / 864e5));
+    document.getElementById('cd-h').textContent = p(Math.floor(df % 864e5 / 36e5));
+    document.getElementById('cd-m').textContent = p(Math.floor(df % 36e5  / 6e4));
+    document.getElementById('cd-s').textContent = p(Math.floor(df % 6e4   / 1e3));
+}
+
+renderItinerary();
+tick();
+setInterval(tick, 1000);
+</script>
+</body>
+</html>
