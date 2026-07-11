@@ -6,7 +6,7 @@
     <title>澳洲家庭旅遊 2026｜Sydney + Uluru</title>
     <!--
     ========================================================
-      澳洲家庭旅遊網頁  |  Sydney + Uluru  |  2026/8/13–8/22
+      澳洲家庭旅遊網頁  |  Sydney + Uluru  |  2026/8/13–8/23
     ========================================================
     【GitHub Pages 上架步驟】
     1. github.com → 新建 Repository（例如 au-trip-2026）
@@ -347,7 +347,7 @@
         <span class="hero-flags">🦘 🇦🇺 ✨</span>
         <h1>澳洲家庭旅遊 2026</h1>
         <div class="hero-sub">Sydney · Uluru · Blue Mountains</div>
-        <div class="hero-pill">2026 年 8 月 13 日 – 8 月 22 日</div>
+        <div class="hero-pill">2026 年 8 月 13 日 – 8 月 23 日</div>
     </div>
 </div>
 
@@ -436,7 +436,7 @@ const CHAPTERS = [
         beforeDay: 6,
         act: "ACT III · 華麗回歸",
         title: "難忘的海港告別",
-        sub: "Days 6–10",
+        sub: "Days 6–11",
         bg: "linear-gradient(to bottom,rgba(0,0,0,.2),rgba(0,0,0,.80)),url('https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?auto=format&fit=crop&w=800&h=400&q=80'),linear-gradient(145deg,#05101C,#0D2535,#182F45)"
     },
 ];
@@ -461,21 +461,24 @@ const DAYS = [
         photo:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=260&q=80",
         fb:"linear-gradient(135deg,#0A2640,#1A5070)",
         acts:[
-            {time:"09:30",       icon:"🎭", text:"抵達歌劇院",                         map:"Sydney+Opera+House"},
-            {time:"10:00–11:00", icon:"🎵", text:"歌劇院內部導覽",                     map:"Sydney+Opera+House"},
+            {time:"10:15",       icon:"🎭", text:"Welcome Centre 報到（Lower Concourse）", map:"Sydney+Opera+House+Welcome+Centre"},
+            {time:"10:30–11:30", icon:"🎵", text:"Sydney Opera House Tour 英文導覽（已預約）", map:"Sydney+Opera+House"},
             {time:"12:00",       icon:"🍽️", text:"Bennelong 午餐",                    map:"Bennelong+Restaurant+Sydney"},
             {time:"13:30–15:30", icon:"⛴️", text:"Ferry 港灣遊船體驗",                map:"Circular+Quay+Ferry+Terminal+Sydney"},
             {time:"17:30–19:30", icon:"🥩", text:"The Rocks 晚餐探索",               map:"The+Rocks+Sydney"},
         ]
     },
     {
-        day:3, date:"8/15（六）", title:"Bondi 半天＋購物", theme:"s",
+        day:3, date:"8/15（六）", title:"Bondi＋BridgeClimb", theme:"s",
         photo:"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&h=260&q=80",
         fb:"linear-gradient(135deg,#0B3545,#1A6080)",
         acts:[
             {time:"08:30",       icon:"🚌", text:"出發前往 Bondi Beach",              map:"Bondi+Beach+Sydney"},
-            {time:"09:00–11:30", icon:"🏖️", text:"Coastal Walk（Bondi→Coogee）＋Brunch", map:"Bondi+to+Coogee+Coastal+Walk"},
-            {time:"13:00–17:00", icon:"🛍️", text:"QVB / Pitt Street Mall 購物",     map:"Queen+Victoria+Building+Sydney"},
+            {time:"09:00–11:30", icon:"🏖️", text:"Bondi Beach＋Coastal Walk 精華段", map:"Bondi+to+Coogee+Coastal+Walk"},
+            {time:"12:00–13:15", icon:"🍽️", text:"Bondi 午餐後返回飯店換裝",         map:"Bondi+Beach+Sydney"},
+            {time:"15:40",       icon:"🌉", text:"抵達 BridgeClimb 報到",             map:"BridgeClimb+Sydney"},
+            {time:"16:25–19:25", icon:"🌇", text:"Summit Climb Experience（已預約）", map:"BridgeClimb+Sydney"},
+            {time:"晚上",         icon:"🍽️", text:"The Rocks 晚餐",                   map:"The+Rocks+Sydney"},
         ]
     },
     {
@@ -483,10 +486,9 @@ const DAYS = [
         photo:"https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?auto=format&fit=crop&w=800&h=260&q=80",
         fb:"linear-gradient(135deg,#3E0E04,#8B3510)",
         acts:[
-            {time:"05:30",       icon:"⏰", text:"起床準備出發",                        map:null},
-            {time:"06:00",       icon:"🚕", text:"前往 Sydney 機場",                   map:"Sydney+Airport"},
-            {time:"08:30–11:30", icon:"✈️", text:"飛往 Uluru（Ayers Rock Airport）", map:"Ayers+Rock+Airport+Connellan"},
-            {time:"12:30",       icon:"🚗", text:"租車＋入住沙漠度假村",               map:"Ayers+Rock+Resort+Yulara"},
+            {time:"07:15",       icon:"🚕", text:"退房並前往 Sydney 機場",              map:"Sydney+Airport"},
+            {time:"10:35–13:40", icon:"✈️", text:"JQ660 飛往 Uluru",                  map:"Ayers+Rock+Airport+Connellan"},
+            {time:"15:00",       icon:"🏨", text:"入住 Sails in the Desert",           map:"Sails+in+the+Desert+Yulara"},
             {time:"15:30–17:30", icon:"🌄", text:"Uluru 日落觀賞 🌅（帶厚外套！）",   map:"Talinguru+Nyakunytjaku+Uluru+Sunset"},
         ]
     },
@@ -507,8 +509,9 @@ const DAYS = [
         fb:"linear-gradient(135deg,#05101C,#0D2A45)",
         acts:[
             {time:"08:30–10:30", icon:"☕", text:"自由活動＋早餐",                    map:null},
-            {time:"12:30–16:00", icon:"✈️", text:"飛回 Sydney",                      map:"Sydney+Airport"},
-            {time:"19:00",       icon:"🍾", text:"Quay Restaurant 慶祝晚餐 🌟",      map:"Quay+Restaurant+Sydney"},
+            {time:"14:30–18:00", icon:"✈️", text:"JQ661 飛回 Sydney",                map:"Sydney+Airport"},
+            {time:"19:30",       icon:"🏨", text:"入住 Meriton Suites Kent Street",  map:"Meriton+Suites+Kent+Street+Sydney"},
+            {time:"晚上",         icon:"🍽️", text:"飯店附近簡單晚餐",                  map:"Chinatown+Sydney"},
         ]
     },
     {
@@ -516,18 +519,22 @@ const DAYS = [
         photo:"https://images.unsplash.com/photo-1504618223053-559bdef9f330?auto=format&fit=crop&w=800&h=260&q=80",
         fb:"linear-gradient(135deg,#0A2818,#1A5030)",
         acts:[
-            {time:"09:00",       icon:"⛴️", text:"Circular Quay 搭 Ferry 出發",      map:"Circular+Quay+Ferry+Terminal+Sydney"},
-            {time:"09:30–15:30", icon:"🐨", text:"塔隆加動物園（無尾熊、袋鼠！）",   map:"Taronga+Zoo+Sydney"},
-            {time:"16:00",       icon:"⛴️", text:"搭渡輪返回市區",                    map:"Taronga+Zoo+Wharf+Ferry+Terminal"},
+            {time:"08:30",       icon:"🚆", text:"前往 Circular Quay",                map:"Circular+Quay+Ferry+Terminal+Sydney"},
+            {time:"09:00",       icon:"⛴️", text:"搭渡輪前往 Taronga Zoo",            map:"Taronga+Zoo+Wharf+Ferry+Terminal"},
+            {time:"09:30–15:30", icon:"🐨", text:"Taronga Zoo Sydney：澳洲動物與港灣景觀", map:"Taronga+Zoo+Sydney"},
+            {time:"16:00–17:00", icon:"⛴️", text:"搭渡輪返回市區，回飯店休息",         map:"Circular+Quay+Ferry+Terminal+Sydney"},
         ]
     },
     {
-        day:8, date:"8/20（四）", title:"港灣探險", theme:"s",
+        day:8, date:"8/20（四）", title:"市區漫遊＋The Lion King", theme:"s",
         photo:"https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?auto=format&fit=crop&w=800&h=260&q=80",
         fb:"linear-gradient(135deg,#060F1A,#0D2535)",
         acts:[
-            {time:"10:00–13:00", icon:"🌉", text:"BridgeClimb 大橋攀爬 / 港灣遊船", map:"BridgeClimb+Sydney"},
-            {time:"下午",         icon:"☕", text:"自由活動 — 逛街、休息或咖啡廳",     map:null},
+            {time:"09:30–12:00", icon:"⛪", text:"Hyde Park＋St Mary's Cathedral",   map:"St+Marys+Cathedral+Sydney"},
+            {time:"12:00–14:00", icon:"🛍️", text:"QVB 午餐與逛街",                  map:"Queen+Victoria+Building+Sydney"},
+            {time:"14:00–16:30", icon:"☕", text:"回飯店休息，準備晚上看劇",           map:null},
+            {time:"17:00–18:15", icon:"🍽️", text:"Haymarket / Chinatown 晚餐",      map:"Chinatown+Sydney"},
+            {time:"19:00",       icon:"🦁", text:"Disney The Lion King 舞台劇",      map:"Capitol+Theatre+Sydney"},
         ]
     },
     {
@@ -542,15 +549,31 @@ const DAYS = [
         ]
     },
     {
-        day:10, date:"8/22（六）", title:"日出＋回程 ✈️", theme:"s",
+        day:10, date:"8/22（六）", title:"藍山日出＋返回雪梨", theme:"s",
         photo:"https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&h=260&q=80",
         fb:"linear-gradient(135deg,#182808,#2E4A15)",
         acts:[
             {time:"06:30",       icon:"🌅", text:"藍山日出觀景",                      map:"Echo+Point+Lookout+Katoomba"},
             {time:"08:30",       icon:"☕", text:"早餐",                              map:null},
-            {time:"10:00–12:30", icon:"🚌", text:"回 Sydney 市區",                   map:"Sydney+CBD"},
-            {time:"13:30–17:00", icon:"🛍️", text:"最後購物＋整理行李",               map:"Pitt+Street+Mall+Sydney"},
-            {time:"22:10",       icon:"✈️", text:"班機返台 — 旅途順利！✈️",           map:"Sydney+Airport"},
+            {time:"10:00",       icon:"🏨", text:"Sky Rider Motor Inn 退房",          map:"Sky+Rider+Motor+Inn+Katoomba"},
+            {time:"10:30–13:30", icon:"🌿", text:"Lincoln's Rock / Leura 午餐",       map:"Lincoln's+Rock+NSW"},
+            {time:"14:00–16:00", icon:"🚗", text:"返回 Sydney 市區",                  map:"Sydney+CBD"},
+            {time:"16:00",       icon:"🏨", text:"入住 Meriton Suites Kent Street（已預約）", map:"Meriton+Suites+Kent+Street+Sydney"},
+            {time:"晚上",         icon:"🍽️", text:"市區晚餐＋整理行李",                map:null},
+        ]
+    },
+    {
+        day:11, date:"8/23（日）", title:"雪梨大學＋返台", theme:"s",
+        photo:"https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=800&h=260&q=80",
+        fb:"linear-gradient(135deg,#27163D,#673A75)",
+        acts:[
+            {time:"08:00–09:00", icon:"☕", text:"早餐＋整理行李",                     map:null},
+            {time:"10:00",       icon:"🏨", text:"退房並寄放行李",                    map:"Meriton+Suites+Kent+Street+Sydney"},
+            {time:"10:30–12:30", icon:"🎓", text:"參觀雪梨大學：Quadrangle、Great Hall", map:"University+of+Sydney+Quadrangle"},
+            {time:"12:30–14:00", icon:"🍽️", text:"Newtown / Broadway 午餐",          map:"Newtown+Sydney"},
+            {time:"14:00–16:30", icon:"🛍️", text:"返回市區取行李、最後採買",           map:"Pitt+Street+Mall+Sydney"},
+            {time:"18:30",       icon:"🚕", text:"前往 Sydney Airport",              map:"Sydney+Airport"},
+            {time:"22:10",       icon:"✈️", text:"CI0052 返回台北",                  map:"Sydney+Airport"},
         ]
     },
 ];
@@ -631,7 +654,7 @@ function tog(hdr) {
 // ═══════════════════════════════════════
 function tick() {
     const go  = new Date('2026-08-13T11:00:00+10:00');
-    const end = new Date('2026-08-22T23:59:00+10:00');
+    const end = new Date('2026-08-23T23:59:00+10:00');
     const now = new Date();
     const df  = go - now;
 
