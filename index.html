@@ -336,6 +336,150 @@
     .ft-big { font-size: 28px; display: block; margin-bottom: 10px; }
     .ft-txt { color: var(--cream); font-size: 14px; font-weight: 600; }
     .ft-sub { color: var(--mid); font-size: 11px; margin-top: 6px; letter-spacing: 1px; }
+
+    /* ─── SUNNY FAMILY TRAVEL JOURNAL ─── */
+    :root {
+        --gold: #F2BC3B;
+        --gold-lt: #FFE7A0;
+        --gold-dk: #C78A16;
+        --navy: #FFFDF7;
+        --navy-2: #F8F1E5;
+        --card: #FFFFFF;
+        --card-lt: #FFF8EA;
+        --white: #24343C;
+        --cream: #52636A;
+        --mid: #718087;
+        --uluru-dk: #A94126;
+        --uluru-mid: #D85E3C;
+        --uluru-br: #E8754F;
+        --syd-dk: #197D9F;
+        --syd-mid: #36A1C6;
+        --syd-br: #58B9D8;
+        --mtn-dk: #48705A;
+        --mtn-mid: #6E957C;
+        --paper: #FFFDF7;
+        --ink: #24343C;
+        --line: #EADDC7;
+        --sage: #5F856F;
+    }
+
+    body {
+        background-color: var(--paper);
+        background-image:
+            radial-gradient(circle at 12% 8%, rgba(245,196,81,.08) 0 2px, transparent 3px),
+            radial-gradient(circle at 88% 20%, rgba(88,169,199,.07) 0 2px, transparent 3px);
+        background-size: 38px 38px, 54px 54px;
+        color: var(--ink);
+        box-shadow: 0 0 50px rgba(55,77,84,.12);
+    }
+
+    .hero { min-height: 390px; padding: 0 22px 36px; justify-content: flex-end; }
+    .hero-bg {
+        background-image:
+            linear-gradient(to bottom, rgba(24,72,88,.03) 10%, rgba(20,64,78,.22) 62%, rgba(18,54,65,.62) 100%),
+            url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=900&q=88');
+    }
+    .hero-bg::after {
+        opacity: .9;
+        background-image: linear-gradient(110deg, transparent 0 60%, rgba(255,255,255,.16));
+    }
+    .hero-content { width:100%; padding:20px 10px 0; }
+    .hero-flags { font-size: 25px; margin-bottom: 7px; }
+    .hero h1 { color:#fff; font-size:28px; text-shadow:0 3px 18px rgba(9,49,62,.55); }
+    .hero-sub { color:#C9F0FC; font-size:10px; letter-spacing:2.6px; text-shadow:0 2px 8px rgba(9,49,62,.7); }
+    .hero-pill { color:var(--ink); border-color:#F1D486; background:#FFF0AD; margin-top:13px; box-shadow:0 5px 16px rgba(25,55,60,.16); }
+
+    .destination-tabs { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; padding:16px 18px 0; }
+    .destination-tab { color:#fff; border-radius:14px; padding:12px 8px; text-align:center; box-shadow:0 5px 14px rgba(54,74,80,.09); }
+    .destination-tab strong { display:block; font-size:13px; }
+    .destination-tab span { display:block; font-size:8px; margin-top:2px; letter-spacing:.8px; opacity:.88; }
+    .destination-tab.sydney { background:#38A7CC; }
+    .destination-tab.uluru { background:#E66742; }
+    .destination-tab.mountains { background:#60876E; }
+
+    .section { padding: 30px 18px 0; }
+    .sec-lbl { color: var(--ink); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 13px; }
+    .sec-lbl::after { background: repeating-linear-gradient(to right, #E4BE62 0 5px, transparent 5px 10px); }
+
+    .cd-card { background: #fff; border: 1px solid #F0DFC0; border-radius: 22px; box-shadow: 0 8px 24px rgba(77,91,91,.08); }
+    .cd-hint { color: var(--mid); margin-bottom: 14px; }
+    .cd-box { background: #FFF8E8; border-color: #F2DCA9; border-radius: 16px; }
+    .cd-box:nth-child(2) { background:#FFF2E9; border-color:#F4CCBC; }
+    .cd-box:nth-child(3) { background:#EEF8F3; border-color:#CDE1D5; }
+    .cd-box:nth-child(4) { background:#EDF8FC; border-color:#CBE4ED; }
+    .cd-n { color: var(--ink); }
+    .cd-u { color: var(--mid); }
+
+    .w-card { min-height: 150px; box-shadow: 0 8px 20px rgba(55,77,84,.08); }
+    .w-card.syd { background: linear-gradient(145deg,#EAF8FD,#CDECF6); border-color:#8CCDE1; }
+    .w-card.ulu { background: linear-gradient(145deg,#FFF1E9,#F9D4C5); border-color:#EBA58B; }
+    .w-city { color: var(--ink); }
+    .w-temp { color: var(--syd-dk); }
+    .w-card.ulu .w-temp { color: var(--uluru-dk); }
+    .w-tips { color: #52636A; }
+    .w-note { color: #4C5C61; background:#FFF9E9; border-color:#F0D99C; border-left-color:var(--gold); }
+    .w-note strong, .w-note strong[style] { color:#8A6414 !important; }
+
+    .chapter { min-height: 150px; border-radius: 24px; box-shadow: 0 10px 24px rgba(36,52,60,.12); }
+    .ch-act { color:#FFE18B; }
+    .ch-sub { color:rgba(255,255,255,.82); }
+
+    .day-card { background:#fff; border-color:#E9DDC9; border-radius:18px; box-shadow:0 5px 16px rgba(60,76,78,.07); }
+    .day-card:hover { border-color:#A7CDDA; }
+    .day-photo { height:105px; }
+    .day-hdr { padding:13px 15px; }
+    .day-name { color:var(--ink); }
+    .day-date { color:var(--mid); }
+    .db-s { background:linear-gradient(135deg,#35A1C5,#79C9DF); color:#fff; }
+    .db-u { background:linear-gradient(135deg,#D85E3C,#EE9070); }
+    .day-arr { color:var(--syd-dk); }
+    .day-body { border-top-color:#EEE4D4; }
+    .act { border-bottom-color:#EEE7DB; }
+    .act-t.s { color:var(--syd-dk); }
+    .act-t.u { color:var(--uluru-dk); }
+    .act-tx { color:#45565C; }
+    .mlink.s { color:var(--syd-dk); background:#E9F7FB; border-color:#B8DDE9; }
+    .mlink.u { color:var(--uluru-dk); background:#FFF0EA; border-color:#F0C4B3; }
+
+    .packing-card {
+        background:#fff; border:1px solid #BFD3C6; border-radius:22px;
+        padding:18px; box-shadow:0 10px 26px rgba(67,91,77,.10);
+    }
+    .packing-top { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; margin-bottom:15px; }
+    .packing-title { font-size:18px; font-weight:900; color:var(--ink); }
+    .packing-sub { color:var(--mid); font-size:12px; margin-top:2px; }
+    .packing-progress { font-size:12px; font-weight:800; color:var(--sage); white-space:nowrap; padding-top:4px; }
+    .progress-track { height:7px; background:#E6EEE8; border-radius:99px; overflow:hidden; margin-bottom:16px; }
+    .progress-fill { height:100%; width:0; background:linear-gradient(90deg,#5F856F,#8CB49A); transition:width .25s ease; }
+    .packing-form { display:flex; gap:8px; margin-bottom:12px; }
+    .packing-input {
+        min-width:0; flex:1; border:1px solid #D8CCB8; border-radius:13px; padding:11px 12px;
+        font:inherit; font-size:14px; color:var(--ink); background:#FFFDF8; outline:none;
+    }
+    .packing-input:focus { border-color:var(--syd-mid); box-shadow:0 0 0 3px rgba(54,161,198,.14); }
+    .packing-add { border:0; border-radius:13px; padding:0 17px; color:#fff; background:var(--sage); font-weight:800; cursor:pointer; }
+    .packing-add:active { transform:translateY(1px); }
+    .packing-list { list-style:none; }
+    .packing-item { display:flex; align-items:center; gap:10px; min-height:46px; border-bottom:1px solid #EEE7DB; }
+    .packing-item:last-child { border-bottom:0; }
+    .packing-check { width:22px; height:22px; accent-color:var(--sage); flex:0 0 auto; }
+    .packing-text { flex:1; font-size:14px; color:var(--ink); }
+    .packing-item.done .packing-text { color:#8A9596; text-decoration:line-through; }
+    .packing-delete { border:0; background:transparent; color:#B06A57; font-size:12px; font-weight:800; padding:8px; cursor:pointer; }
+    .packing-empty { text-align:center; color:var(--mid); font-size:13px; padding:18px 0 8px; }
+
+    .footer { border-top:1px dashed #DFC685; background:#FFF8E7; margin-top:30px; }
+    .ft-txt { color:var(--sage); }
+    .ft-sub { color:var(--mid); }
+
+    @media (max-width:420px) {
+        .hero { min-height:365px; }
+        .hero h1 { font-size:25px; }
+        .w-grid { gap:9px; }
+        .w-card { padding:16px 13px; }
+        .cd-row { gap:7px; }
+        .cd-n { font-size:29px; }
+    }
     </style>
 </head>
 <body>
@@ -367,6 +511,12 @@
     <div class="trip-end" id="cdEnd">🏠 旅途圓滿結束，滿載回憶平安回家！</div>
 </div>
 
+<div class="destination-tabs" aria-label="旅行目的地">
+    <div class="destination-tab sydney"><strong>雪梨</strong><span>SYDNEY</span></div>
+    <div class="destination-tab uluru"><strong>烏魯魯</strong><span>ULURU</span></div>
+    <div class="destination-tab mountains"><strong>藍山</strong><span>BLUE MOUNTAINS</span></div>
+</div>
+
 <!-- ════════ WEATHER ════════ -->
 <div class="section">
     <div class="sec-lbl">🌤️ 八月天氣提醒</div>
@@ -392,17 +542,23 @@
     <div id="itinerary"></div>
 </div>
 
-<!-- ════════ COMMENTS ════════ -->
+<!-- ════════ PACKING CHECKLIST ════════ -->
 <div class="section" style="padding-top:28px; padding-bottom:24px;">
-    <div class="sec-lbl">💬 家人留言板</div>
-    <div class="form-card">
-        <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdzAMFfuPF_PbLLFQj_mpXEByQJ6I6LH8lFrwExKsc1vFMSsA/viewform?embedded=true"
-            width="100%" height="520"
-            frameborder="0" marginheight="0" marginwidth="0"
-            style="width:100%;display:block;border:none;">
-            載入中…
-        </iframe>
+    <div class="sec-lbl">🧳 行李提醒清單</div>
+    <div class="packing-card">
+        <div class="packing-top">
+            <div>
+                <div class="packing-title">出發前別忘了</div>
+                <div class="packing-sub">完成的項目會自動保存在這台裝置</div>
+            </div>
+            <div class="packing-progress" id="packingProgress">0 / 0 已打包</div>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="packingProgressFill"></div></div>
+        <form class="packing-form" id="packingForm">
+            <input class="packing-input" id="packingInput" type="text" maxlength="40" placeholder="新增物品，例如：轉接頭" aria-label="新增行李物品">
+            <button class="packing-add" type="submit">新增</button>
+        </form>
+        <ul class="packing-list" id="packingList" aria-live="polite"></ul>
     </div>
 </div>
 
@@ -451,7 +607,7 @@ const DAYS = [
         fb:"linear-gradient(135deg,#08253C,#1A5A80)",
         acts:[
             {time:"11:00",       icon:"✈️", text:"抵達 Sydney 國際機場",              map:"Sydney+Kingsford+Smith+Airport"},
-            {time:"13:00",       icon:"🏨", text:"飯店入住，休息整理",                map:null},
+            {time:"14:00",       icon:"🏨", text:"Little National Hotel Sydney 入住（3 晚）｜26 Clarence Street", map:"Little+National+Hotel+Sydney+26+Clarence+Street"},
             {time:"15:00–18:00", icon:"🚶", text:"Circular Quay 散步＋歌劇院外觀",   map:"Circular+Quay+Sydney"},
             {time:"18:30",       icon:"🍽️", text:"晚餐＋早點休息",                   map:null},
         ]
@@ -486,7 +642,7 @@ const DAYS = [
         photo:"https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?auto=format&fit=crop&w=800&h=260&q=80",
         fb:"linear-gradient(135deg,#3E0E04,#8B3510)",
         acts:[
-            {time:"07:15",       icon:"🚕", text:"退房並前往 Sydney 機場",              map:"Sydney+Airport"},
+            {time:"07:15",       icon:"🚕", text:"Little National Hotel Sydney 退房並前往機場", map:"Sydney+Airport"},
             {time:"10:35–13:40", icon:"✈️", text:"JQ660 飛往 Uluru",                  map:"Ayers+Rock+Airport+Connellan"},
             {time:"15:00",       icon:"🏨", text:"入住 Sails in the Desert",           map:"Sails+in+the+Desert+Yulara"},
             {time:"15:30–17:30", icon:"🌄", text:"Uluru 日落觀賞 🌅（帶厚外套！）",   map:"Talinguru+Nyakunytjaku+Uluru+Sunset"},
@@ -545,7 +701,7 @@ const DAYS = [
             {time:"09:00",       icon:"🚌", text:"從 Sydney 出發前往藍山",            map:"Blue+Mountains+National+Park+NSW"},
             {time:"11:00",       icon:"🌿", text:"Leura 小鎮午餐＋散步",             map:"Leura+NSW+Australia"},
             {time:"13:00–17:00", icon:"🚡", text:"Scenic World 纜車＋三姐妹岩",      map:"Scenic+World+Katoomba"},
-            {time:"晚上",         icon:"🏨", text:"入住藍山飯店＋休息",               map:"Leura+NSW+Australia"},
+            {time:"17:30",       icon:"🏨", text:"入住 Sky Rider Motor Inn 天空騎士汽車旅館（1 晚）｜302 Bathurst Road, Katoomba", map:"Sky+Rider+Motor+Inn+Katoomba"},
         ]
     },
     {
@@ -676,6 +832,85 @@ function tick() {
 renderItinerary();
 tick();
 setInterval(tick, 1000);
+
+// ═══════════════════════════════════════
+// PACKING CHECKLIST（localStorage 自動保存）
+// ═══════════════════════════════════════
+const PACKING_KEY = 'australia-trip-packing-v1';
+const DEFAULT_PACKING = [
+    { id:'passport', text:'護照', done:false },
+    { id:'tickets', text:'機票與訂房確認', done:false },
+    { id:'coat', text:'保暖外套', done:false },
+    { id:'sunscreen', text:'防曬乳與太陽眼鏡', done:false },
+    { id:'adapter', text:'澳洲轉接頭', done:false },
+    { id:'medicine', text:'常備藥品', done:false }
+];
+
+let packingItems;
+try {
+    const savedPacking = JSON.parse(localStorage.getItem(PACKING_KEY));
+    packingItems = Array.isArray(savedPacking) ? savedPacking : DEFAULT_PACKING;
+} catch (_) {
+    packingItems = DEFAULT_PACKING;
+}
+
+function savePacking() {
+    localStorage.setItem(PACKING_KEY, JSON.stringify(packingItems));
+}
+
+function renderPacking() {
+    const list = document.getElementById('packingList');
+    const done = packingItems.filter(item => item.done).length;
+    document.getElementById('packingProgress').textContent = `${done} / ${packingItems.length} 已打包`;
+    document.getElementById('packingProgressFill').style.width = packingItems.length ? `${done / packingItems.length * 100}%` : '0%';
+
+    if (!packingItems.length) {
+        list.innerHTML = '<li class="packing-empty">清單是空的，新增第一件要帶的物品吧！</li>';
+        return;
+    }
+
+    list.innerHTML = packingItems.map(item => `
+        <li class="packing-item${item.done ? ' done' : ''}" data-id="${item.id}">
+            <input class="packing-check" type="checkbox" ${item.done ? 'checked' : ''} aria-label="${item.done ? '取消完成' : '標記完成'}：${item.text}">
+            <span class="packing-text"></span>
+            <button class="packing-delete" type="button" aria-label="刪除 ${item.text}">刪除</button>
+        </li>`).join('');
+
+    [...list.querySelectorAll('.packing-item')].forEach((row, index) => {
+        row.querySelector('.packing-text').textContent = packingItems[index].text;
+    });
+}
+
+document.getElementById('packingForm').addEventListener('submit', event => {
+    event.preventDefault();
+    const input = document.getElementById('packingInput');
+    const text = input.value.trim();
+    if (!text) { input.focus(); return; }
+    packingItems.push({ id:`item-${Date.now()}`, text, done:false });
+    input.value = '';
+    savePacking();
+    renderPacking();
+    input.focus();
+});
+
+document.getElementById('packingList').addEventListener('change', event => {
+    if (!event.target.classList.contains('packing-check')) return;
+    const id = event.target.closest('.packing-item').dataset.id;
+    const item = packingItems.find(entry => entry.id === id);
+    if (item) item.done = event.target.checked;
+    savePacking();
+    renderPacking();
+});
+
+document.getElementById('packingList').addEventListener('click', event => {
+    if (!event.target.classList.contains('packing-delete')) return;
+    const id = event.target.closest('.packing-item').dataset.id;
+    packingItems = packingItems.filter(item => item.id !== id);
+    savePacking();
+    renderPacking();
+});
+
+renderPacking();
 </script>
 </body>
 </html>
